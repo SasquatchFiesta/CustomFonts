@@ -198,7 +198,7 @@ SlashCmdList["CFONTS"] = function(msg)
             arialn = "Fonts\\ARIALN.TTF", 
             morpheus = "Fonts\\MORPHEUS.TTF",
             skurri = "Fonts\\skurri.ttf",
-            custom = "Fonts\\custom.ttf"
+            custom = "Interface\\AddOns\\CustomFonts\\Fonts\\custom.ttf" --\Interface\AddOns\CustomFonts\Fonts
         }
         
         if fontMap[args[2]] then

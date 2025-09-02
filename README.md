@@ -4,25 +4,17 @@ Changes fonts and font settings optionally, disabled by default
 type ```/cfonts help``` for command information
 
 ## Notes:
-To add your own font, download the .ttf file and in the directory of your wow.exe make a folder named 'Fonts' and add the .ttf file within.
-Then change the name of the font file to custom.ttf
+To add your own font, download the .ttf file and add it to the `Fonts` folder within the addon, rename to custom.ttf
+To enable custom font run ```/cfonts font custom``` in game
 
-├── World of Warcraft
+```\Interface\AddOns\CustomFonts\Fonts\custom.ttf
 
-│   ├── Interface/
-
-│   ├── Data/
-
-│   ├── WTF/
-
-│   ├── Launcher.exe
-
-│   ├── ***Fonts/***
-
-│   │   ├── ***custom.ttf***
 
 
 ## Changelog
+
+### Version 1.0.2
+- moved custom fonts into addon to make it easier
 
 ### Version 1.0.1
 - changed command to ```/cfonts```
