@@ -130,8 +130,8 @@ local function ChangeQuestLogFonts()
 end
 
 -- Main slash command handler
-SLASH_QUESTFONTS1 = "/questfonts"
-SlashCmdList["QUESTFONTS"] = function(msg)
+SLASH_CFONTS1 = "/cfonts"
+SlashCmdList["CFONTS"] = function(msg)
     local args = {}
     for word in msg:gmatch("%S+") do
         table.insert(args, word:lower())
@@ -139,24 +139,24 @@ SlashCmdList["QUESTFONTS"] = function(msg)
     
     if #args == 0 or args[1] == "help" then
         print("Quest Font Commands:")
-        print("  /questfonts on - Enable quest log fonts")
-        print("  /questfonts off - Disable quest log fonts")
-        print("  /questfonts toggle - Toggle fonts on/off")
-        print("  /questfonts apply - Apply current font settings")
-        print("  /questfonts status - Show current settings")
+        print("  /cfonts on - Enable quest log fonts")
+        print("  /cfonts off - Disable quest log fonts")
+        print("  /cfonts toggle - Toggle fonts on/off")
+        print("  /cfonts apply - Apply current font settings")
+        print("  /cfonts status - Show current settings")
         print("")
         print("Font Settings:")
-        print("  /questfonts font <name> - Set font (frizqt, arialn, morpheus, skurri, custom)")
-        print("  /questfonts questsize <size> - Set quest list size (left side)")
-        print("  /questfonts titlesize <size> - Set title size")  
-        print("  /questfonts textsize <size> - Set text/description size")
-        print("  /questfonts titleflags <flags> - Set title flags (outline, thickoutline, monochrome, none)")
-        print("  /questfonts textflags <flags> - Set text flags")
+        print("  /cfonts font <name> - Set font (frizqt, arialn, morpheus, skurri, custom)")
+        print("  /cfonts questsize <size> - Set quest list size (left side)")
+        print("  /cfonts titlesize <size> - Set title size")  
+        print("  /cfonts textsize <size> - Set text/description size")
+        print("  /cfonts titleflags <flags> - Set title flags (outline, thickoutline, monochrome, none)")
+        print("  /cfonts textflags <flags> - Set text flags")
         print("")
         print("Examples:")
-        print("  /questfonts font morpheus")
-        print("  /questfonts questsize 18")
-        print("  /questfonts titleflags outline")
+        print("  /cfonts font morpheus")
+        print("  /cfonts questsize 18")
+        print("  /cfonts titleflags outline")
         
     elseif args[1] == "on" then
         fontsEnabled = true
@@ -278,15 +278,15 @@ SlashCmdList["QUESTFONTS"] = function(msg)
         end
         
     else
-        print("Unknown command. Use '/questfonts help' for usage.")
+        print("Unknown command. Use '/cfonts help' for usage.")
     end
 end
 
 -- Legacy commands for compatibility
-SLASH_QUESTFONT1 = "/questfont"
-SlashCmdList["QUESTFONT"] = function()
-    ChangeQuestLogFonts()
-end
+-- SLASH_QUESTFONT1 = "/questfont"
+-- SlashCmdList["QUESTFONT"] = function()
+--     ChangeQuestLogFonts()
+-- end
 
 -- Hook the font changes to the existing addon's event system
 local fontFrame = CreateFrame("Frame")
