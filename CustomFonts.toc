@@ -1,0 +1,6 @@
+## Interface: 30300
+## Title: Custom Fonts
+## Notes: Changes font settings in quest log
+## Author: Taff
+## SavedVariables: QuestLogFontsDB
+CustomFonts.lua
