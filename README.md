@@ -7,7 +7,7 @@ type ```/cfonts help``` for command information
 To add your own font, download the .ttf file and add it to the `Fonts` folder within the addon, rename to custom.ttf
 To enable custom font run ```/cfonts font custom``` in game
 
-```\Interface\AddOns\CustomFonts\Fonts\custom.ttf
+```\Interface\AddOns\CustomFonts\Fonts\custom.ttf```
 
 
 
